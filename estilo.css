@@ -1,0 +1,459 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Encabezado*/
+header .contenedor {
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    /* background-color: rgba(0, 0, 255, 0.412); */
+    /* position: fixed; para mantener fijo el header
+    width: 100%; */
+    background-color: #0b1522;
+
+}
+
+.contenedor .corazon {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    margin-top: 20%;
+
+}
+
+.contenedor .corazon {
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: -20px 20px 150px #f20044;
+    animation: palpitar 0.5s linear infinite alternate;
+}
+
+@keyframes palpitar {
+    0% {
+        transform: rotate(45deg) scale(1.10);
+    }
+
+    80% {
+        transform: rotate(45deg) scale(1.0);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(0.8);
+    }
+}
+
+.contenedor .corazon::before {
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    right: 50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+
+.contenedor .corazon::after {
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+
+
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(115, 223, 115);
+    font-size: 2.5em;
+    /* background-color: rgba(208, 94, 12, 0.141); */
+    /* animation: palpitar1 0.5s linear infinite alternate; */
+}
+
+/* @keyframes palpitar1{
+    0%{transform: scale(1.10);}
+    80%{transform: scale(1.0);}
+    100%{transform: scale(0.8);}
+} */
+
+header .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    /* background-color: rgb(3, 63, 63); */
+    /* border-radius: 10px; */
+    font-size: 1.5em;
+}
+
+header a:hover {
+    padding: 5px;
+    color: rgb(115, 223, 115);
+    background-color: rgba(0, 0, 0, 0.436);
+}
+
+/********* Imagen - Buscador ********/
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)),
+        url("media/hero3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1 {
+    color: white;
+    font-size: 3.5em;
+}
+
+/********* ESPECIALIDADES ********/
+#especialidades {
+    /* background-color: rgb(245, 245, 245); */
+    color: black;
+    text-align: center;
+}
+
+#especialidades .contenedor {
+    padding: 100px 0px;
+
+}
+
+#especialidades h2 {
+    font-size: 4em;
+    margin-bottom: 0;
+}
+
+#especialidades h3 {
+    color: white;
+}
+
+#especialidades p {
+    /*para desaparecer el parrafo*/
+    display: none;
+}
+
+#especialidades .card {
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card:first-child {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)),
+        url("media/clinico.jpg");
+}
+
+.card:nth-child(2) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)),
+        url("media/cardiologo.jpg");
+}
+
+.card:nth-child(3) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)),
+        url("media/pediatria.jpg");
+}
+
+.card:nth-child(4) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)),
+        url("media/psicologia1.jpg");
+}
+
+#especialidades button {
+    width: 300px;
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0;
+    margin-bottom: 10%;
+    padding: 20px;
+    font-size: 1.5em;
+
+}
+
+/********* ESTUDIOS ********/
+#estudios .contenedor2 {
+    padding: 100px 0px;
+    background-color: rgba(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+
+#estudios h2 {
+    margin-top: 0;
+    font-size: 4em;
+}
+
+#estudios .card{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(218, 213, 213, 0.5);
+}
+
+.contenedor2 .card:first-child {
+    /*Toma el primero como padre los demas como hijos*/
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)), url("media/tomografia.jpg");
+}
+
+.contenedor2 .card:nth-child(2) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)), url("media/radiologia.jpg");
+}
+
+.contenedor2 .card:nth-child(3) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)), url("media/ecografias.jpg");
+}
+
+.contenedor2 .card:nth-child(4) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)), url("media/laboratorio.jpg");
+}
+
+/********* SOBRE NOSOTROS ********/
+#nosotros .contenedor {
+    text-align: center;
+    padding: 100px 12px;
+}
+
+#nosotros h2 {
+    margin-top: 0;
+    font-size: 4em;
+}
+
+#nosotros p {
+    line-height: 30px;
+    font-size: 1.5em;
+}
+
+#nosotros span {
+    color: rgb(115, 223, 115);
+    background-color: rgba(19, 208, 12, 0.141);
+    padding: 5px;
+}
+
+/********* CONTACTOS/UBICACIÓN ********/
+#contactos .contenedor {
+    padding: 100px 0px;
+    background-color: rgba(30, 30, 30);
+    color: white;
+    text-align: center;
+    /* text-align: center;
+    padding: 100px 12px;
+    background-color: rgba(30, 30, 30); */
+}
+
+#contactos h2 {
+    margin-top: 0;
+    font-size: 4em;
+    color: white;
+}
+
+#contactos .redes {
+    width: 50px;
+    height: 50px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+#contactos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#contactos p {
+    color: white;
+}
+
+#contactos .row {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#contactos .col {
+    flex-basis: 50%;
+}
+
+#contactos .col p {
+    font-size: 20px;
+}
+
+#contactos .row1 {
+    /*MAPA*/
+    display: block;
+    height: 100%;
+    align-items: center;
+}
+
+footer {
+    background-color: rgba(230, 230, 230);
+}
+
+footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    padding: 12px;
+    color: rgba(100, 100, 100);
+}
+
+footer .contenedor {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 720px) {
+    header {
+        /* position: fixed; */
+        width: 100%;
+
+    }
+
+    header #contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero {
+        background-color: rgb(245, 245, 245);
+    }
+
+    #hero h1 {
+        font-size: 5em;
+    }
+
+    .contenedor .corazon{
+        margin-top: 5%;
+        margin-left: 45%;
+    }
+
+    #especialidades .contenedor {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #especialidades .contenedor-card {
+        display: flex;
+    }
+
+    #especialidades .contenedor-card .card {
+        width: 200px;
+        height: 200px;
+    }
+
+    #especialidades .contenedor-boton{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 10%;
+    }
+
+    #especialidades .contenedor-boton button{
+        margin: 0;
+        width: 500px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #0b1522;
+    }
+
+    #estudios .contenedor2 .contenedor-card{
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    #estudios .contenedor2 .card{
+        height: 300px;
+    }
+
+    #estudios .contenedor2 .card h3{
+        background-position: center center;
+        background-size: cover;
+        margin-top: 20%;
+        font-weight: bold;
+        font-size: 2.5em;
+    }
+
+    #contactos .contenedor .col{
+        background-position: center center;
+        background-size: cover;
+        text-align: initial;
+        display: flex;
+    }
+    #contactos .contenedor .redes{
+        margin-left: 70%;
+    }
+}
